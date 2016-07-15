@@ -17,7 +17,8 @@
             android:id="@+id/tabLayout"
             layout="@layout/tab_layout"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"/>
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"/>
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nestScrollView"
@@ -34,7 +35,6 @@
                     android:id="@+id/musicGrid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     app:columnCount="2"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     app:rowCount="2">
@@ -44,19 +44,15 @@
                         layout="@layout/ellie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginEnd="4dp"
-                        app:layout_gravity="center"
-                        app:layout_columnWeight="1"/>
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginEnd="0dp"/>
 
                     <include
                         layout="@layout/ontheroad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginStart="4dp"
-                        app:layout_gravity="center"
-                        app:layout_columnWeight="1"/>
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginStart="0dp" />
 
                     <!-- Row 2 -->
                     <include
