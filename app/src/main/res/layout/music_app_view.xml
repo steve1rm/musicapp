@@ -19,46 +19,59 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"/>
 
-        <android.support.v7.widget.GridLayout
-            android:id="@+id/musicGrid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:columnCount="2"
-            app:rowCount="2">
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <!-- Row 1-->
-            <include
-                layout="@layout/ellie"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginEnd="4dp"/>
+                android:orientation="vertical">
 
-            <include
-                layout="@layout/ontheroad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginStart="4dp"/>
 
-            <!-- Row 2 -->
-            <include
-                layout="@layout/chrisbrown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:layout_marginTop="4dp"/>
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/musicGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:columnCount="2"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    app:rowCount="2">
 
-            <include
-                layout="@layout/randon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"/>
+                    <!-- Row 1-->
+                    <include
+                        layout="@layout/ellie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"/>
 
-        </android.support.v7.widget.GridLayout>
+                    <include
+                        layout="@layout/ontheroad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="4dp"/>
 
+                    <!-- Row 2 -->
+                    <include
+                        layout="@layout/chrisbrown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="4dp"/>
+
+                    <include
+                        layout="@layout/randon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"/>
+
+                </android.support.v7.widget.GridLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
@@ -68,7 +81,7 @@
         android:src="@drawable/ic_add_black_24dp"
         app:elevation="6dp"
         app:fabSize="normal"
-        app:layout_anchor="@id/musicGrid"
+        app:layout_anchor="@id/nestScrollView"
         app:layout_anchorGravity="end|top"
         app:pressedTranslationZ="16dp"/>
 
