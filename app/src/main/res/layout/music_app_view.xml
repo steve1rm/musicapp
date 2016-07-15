@@ -22,54 +22,68 @@
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nestScrollView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
-                <android.support.v7.widget.GridLayout
+                <RelativeLayout
                     android:id="@+id/musicGrid"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:columnCount="2"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                    app:rowCount="2">
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <Space
+                        android:id="@+id/placeHolder"
+                        android:layout_height="0dp"
+                        android:layout_width="0dp"
+                        android:layout_centerInParent="true"/>
 
                     <!-- Row 1-->
                     <include
+                        android:id="@+id/ellie"
                         layout="@layout/ellie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="0dp"
-                        android:layout_marginEnd="0dp"/>
+                        android:layout_toStartOf="@id/placeHolder"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"/>
 
                     <include
+                        android:id="@+id/ontheroad"
                         layout="@layout/ontheroad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="0dp"
-                        android:layout_marginStart="0dp" />
+                        android:layout_toEndOf="@id/placeHolder"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="4dp" />
 
                     <!-- Row 2 -->
                     <include
+                        android:id="@+id/chrisbrown"
                         layout="@layout/chrisbrown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/ellie"
+                        android:layout_toStartOf="@id/placeHolder"
                         android:layout_marginEnd="4dp"
                         android:layout_marginTop="4dp"/>
 
                     <include
+                        android:id="@+id/randon"
                         layout="@layout/randon"
-                        android:layout_width="170dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/ontheroad"
+                        android:layout_toEndOf="@id/placeHolder"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"/>
 
-                </android.support.v7.widget.GridLayout>
+                </RelativeLayout>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
     </LinearLayout>
