@@ -45,14 +45,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:layout_marginEnd="4dp"/>
+                        android:layout_marginEnd="4dp"
+                        app:layout_gravity="center"
+                        app:layout_columnWeight="1"/>
 
                     <include
                         layout="@layout/ontheroad"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:layout_marginStart="4dp"/>
+                        android:layout_marginStart="4dp"
+                        app:layout_gravity="center"
+                        app:layout_columnWeight="1"/>
 
                     <!-- Row 2 -->
                     <include
@@ -64,7 +68,7 @@
 
                     <include
                         layout="@layout/randon"
-                        android:layout_width="wrap_content"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"/>
