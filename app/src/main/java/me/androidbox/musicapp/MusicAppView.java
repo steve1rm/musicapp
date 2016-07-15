@@ -36,11 +36,12 @@ public class MusicAppView extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.music_app_view, container, false);
 
+        /* Add toolbar */
         final Toolbar toolbar = (Toolbar)view.findViewById(R.id.tool_bar);
         AppCompatActivity activity = (AppCompatActivity)getActivity();
         activity.setSupportActionBar(toolbar);
 
-
+        /* Add tabs */
         TabLayout tabLayout = (TabLayout)view.findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.tab_popular));
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.tab_nearby));
@@ -53,5 +54,4 @@ public class MusicAppView extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.main, menu);
     }
-
 }
